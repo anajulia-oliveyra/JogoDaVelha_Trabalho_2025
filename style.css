@@ -1,6 +1,6 @@
 body {
-    font-family: 'Poppins', cursive;
-    background-color: #fce4ec; 
+    font-family: 'Poppins', cursive, sans-serif;
+    background-color: #fce4ec; /* Rosa clarinho */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff0f5; 
+    background-color: #fff0f5; /* Lavanda clarinha */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
@@ -19,13 +19,13 @@ body {
 
 h1 {
     font-size: 28px;
-    color: #d81b60; 
+    color: #d81b60; /* Rosa vibrante */
 }
 
 #start-button {
     padding: 8px 30px;
     border-radius: 20px;
-    background-color: #f8bbd0;
+    background-color: #f8bbd0; /* Rosa bebê */
     border: none;
     font-weight: bold;
     cursor: pointer;
@@ -34,7 +34,7 @@ h1 {
 }
 
 #start-button:hover {
-    background-color: #f48fb1; 
+    background-color: #f48fb1; /* Rosa mais forte */
 }
 
 .board {
@@ -42,12 +42,13 @@ h1 {
     grid-template-columns: repeat(3, 100px);
     gap: 10px;
     margin-top: 20px;
+    position: relative; /* necessário para linha de vitória */
 }
 
 .board div {
     width: 100px;
     height: 100px;
-    background-color: #ffe4e1; 
+    background-color: #ffe4e1; /* Rosa pastel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,16 +57,24 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     border-radius: 10px;
-    color: #d81b60; 
+    color: #d81b60; /* Letra rosa forte */
 }
 
 .board div:hover {
     background-color: #f8bbd0;
 }
 
-.winning-cell {
-    background-color: #c8e6c9; 
-    transition: background-color 0.5s ease-in;
+#winning-line {
+    position: absolute;
+    background-color: #f48fb1; /* Rosa pastel */
+    height: 6px;
+    width: 0;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: all 0.4s ease;
+    z-index: 10;
+    border-radius: 3px;
 }
 
 #result {
