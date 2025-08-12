@@ -6,34 +6,34 @@ document.addEventListener("DOMContentLoaded",function(){
     let boardArray=["","","","","","","","",""];
 
     function checkWinner(){
-        const winPatterns = [
-            [0,1,2],
-            [3,4,5],
-            [6,7,8],
-            [0,3,6],
-            [1,4,7],
-            [2,5,8],
-            [0,4,8],
-            [2,4,6]
-        ];
+    const winPatterns = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ];
 
-        for (let pattern of winPatterns){
-            const[a,b,c]=pattern;
-            if(boardArray[a] && boardArray[a]==boardArray[b] && boardArray[a]==boardArray[c]){
-                board.children[a].style.backgroundColor="#c8e6c9";
-                board.children[b].style.backgroundColor = "32cd32";
-                board.children[c].style.backgroundColor="32cd32";
-                return boardArray[a];
-            }
-            
+    for (let pattern of winPatterns){
+        const [a, b, c] = pattern;
+        if (boardArray[a] && boardArray[a] == boardArray[b] && boardArray[a] == boardArray[c]){
+            // Aplica a cor a todas as células vencedoras
+            board.children[a].style.backgroundColor = "#32cd32"; // Verde
+            board.children[b].style.backgroundColor = "#32cd32"; // Verde
+            board.children[c].style.backgroundColor = "#32cd32"; // Verde
+            return boardArray[a];
         }
-
-        if(boardArray.includes("")){
-            return null;
-        }
-
-        return "Tie";
     }
+
+    if (boardArray.includes("")){
+        return null;
+    }
+
+    return "Tie";
+}
 
     function handleClick(event) {
     const cell = event.target;
