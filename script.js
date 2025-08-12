@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded",function(){
         const [a, b, c] = pattern;
         if (boardArray[a] && boardArray[a] == boardArray[b] && boardArray[a] == boardArray[c]){
             // Aplica a cor a todas as células vencedoras
-            board.children[a].style.backgroundColor = "#32cd32"; // Verde
-            board.children[b].style.backgroundColor = "#32cd32"; // Verde
-            board.children[c].style.backgroundColor = "#32cd32"; // Verde
+            board.children[a].style.backgroundColor = "#c8e6c9"; // Verde
+            board.children[b].style.backgroundColor = "#c8e6c9"; // Verde
+            board.children[c].style.backgroundColor = "#c8e6c9"; // Verde
             return boardArray[a];
         }
     }
