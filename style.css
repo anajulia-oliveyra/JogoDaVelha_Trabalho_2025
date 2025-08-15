@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', cursive;
-    background-color: #fce4ec; 
+    background-color: #fce4ec; /* Fundo rosa claro */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff0f5; 
+    background-color: #fff0f5; /* Fundo interno rosa clarinho */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
@@ -33,6 +33,7 @@ h1 {
     transition: 0.3s;
 }
 
+/* Efeito ao passar o mouse */
 #start-button:hover {
     background-color: #f48fb1; 
 }
@@ -63,6 +64,7 @@ h1 {
     background-color: #f8bbd0;
 }
 
+/* Verde das células vencedoras */
 .winning-cell {
     background-color: #c8e6c9; 
     transition: background-color 0.5s ease-in;
